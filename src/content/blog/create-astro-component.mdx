@@ -1,83 +1,27 @@
 ---
-title: 'Tutorial: Create an Astro Component'
-description: 'Learn how to create your first Astro component.'
+title: 'Where are all the women in tech?'
+description: 'by Jill Kimball, Northern Arizona University'
 pubDate: 'Jul 02 2022'
 heroImage: '../../assets/images/placeholder-hero.jpg'
-category: 'Category 1'
-tags: ['JavaScript', 'css', 'HTML5', 'GitHub']
+category: 'Software'
+tags: ['Tech', 'Software', 'Women']
 ---
 
-**If you know HTML, you already know enough to write your first Astro component.**
+**Rio de Janeiro, Brazil**
+While working as a software development project manager in Rio de Janeiro, Brazil, Bianca Trinkenreich often wondered why she was one of the few women in the room. This curiosity led her to NAU as a Ph.D. student, where she had the opportunity to seek answers.
 
-Astro component syntax is a superset of HTML. The syntax was [designed to feel familiar to anyone with experience writing HTML or JSX](#differences-between-astro-and-jsx), and adds support for including components and JavaScript expressions.
+**At NAU, Trinkenreich joined assistant professor Igor Steinmacher's**
+Software Engineering Research Laboratory, investigating women's underrepresentation in open-source software development. Her research revealed that women, despite having the same technical skills as men, faced harsher evaluations. Anonymously submitted code from women was better received than when names were attached, indicating bias.
 
-## JSX-like Expressions
+Trinkenreich's dissertation, which delved into these inequalities, earned her the prestigious dissertation award from the Association for Computing Machinery's Special Interest Group on Software Engineering. She is the first Brazilian and Latin American to receive this honor, awarded annually to just one Ph.D. graduate globally.
 
-You can define local JavaScript variables inside of the frontmatter component script between the two code fences (`---`) of an Astro component. You can then inject these variables into the component's HTML template using JSX-like expressions!
+Her journey into studying diversity was unplanned, sparked by a research assistant opportunity with Steinmacher, a fellow Brazilian. At NAU, she dedicated herself to making software engineering more inclusive, starting with a comprehensive review of previous research on inequality in open-source software.
 
-:::note[dynamic vs reactive]
-Using this approach, you can include **dynamic** values that are calculated in the frontmatter. But once included, these values are not **reactive** and will never change. Astro components are templates that only run once, during the rendering step.
+Trinkenreich attributes current inequalities to the male-dominated origins of the industry. She highlights the absence of HR inclusion guidelines in many open-source projects as a significant factor contributing to women's exclusion and unfair treatment.
 
-See below for more examples of [differences between Astro and JSX](#differences-between-astro-and-jsx).
-:::
+In her dissertation, she proposed various strategies to make open-source software communities more inclusive. These include featuring women and minorities in recruitment materials, showcasing successful women's stories on company platforms, and exposing young girls to coding early on to foster their interest in tech.
 
-### Variables
+Now a postdoctoral scholar at Oregon State University, Trinkenreich takes pride in her dissertation's impact. She credits NAU's inclusive focus for guiding her to form a diverse dissertation committee, enriching her research. Through her work, she aims to raise awareness about the importance of diversity in tech, encompassing age, tenure, race, ethnicity, and gender identity.
 
-Local variables can be added into the HTML using the curly braces syntax:
-
-```astro
----
-const name = 'Astro'
----
-
-<div>
-	<h1>Hello {name}!</h1>
-	<!-- Outputs <h1>Hello Astro!</h1> -->
-</div>
-```
-
-### Dynamic Attributes
-
-Local variables can be used in curly braces to pass attribute values to both HTML elements and components:
-
-```astro title="src/components/DynamicAttributes.astro" "{name}" "${name}"
----
-const name = 'Astro'
----
-
-<h1 class={name}>Attribute expressions are supported</h1>
-
-<MyComponent templateLiteralNameAttribute={`MyNameIs${name}`} />
-```
-
-:::caution
-HTML attributes will be converted to strings, so it is not possible to pass functions and objects to HTML elements.
-For example, you can't assign an event handler to an HTML element in an Astro component:
-
-```astro
----
-// dont-do-this.astro
-function handleClick() {
-	console.log('button clicked!')
-}
----
-
-<!-- ❌ This doesn't work! ❌ -->
-<button onClick={handleClick}>Nothing will happen when you click me!</button>
-```
-
-Instead, use a client-side script to add the event handler, like you would in vanilla JavaScript:
-
-```astro
----
-// do-this-instead.astro
----
-
-<button id='button'>Click Me</button>
-<script>
-	function handleClick() {
-		console.log('button clicked!')
-	}
-	document.getElementById('button').addEventListener('click', handleClick)
-</script>
-```
+"I feel like I'm giving back to women, and to all the students and professors I learned from during my time at NAU," Trinkenreich said. "I hope it opens people's eyes to what it means to do research on all the aspects of diversity."
+\*\*Credit: Unsplash/CC0 Public Domain
